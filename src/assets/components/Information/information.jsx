@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Container from "../Container/container";
-import WelcomeSection from "../Welcome/welcome";
-import Progress from "../ProgressLines/progress";
+import React, { useState, useEffect, Suspense } from 'react';
+
+// Dynamically import components
+const Container = React.lazy(() => import("../Container/container"));
+const WelcomeSection = React.lazy(() => import("../Welcome/welcome"));
+const Progress = React.lazy(() => import("../ProgressLines/progress"));
+
 import './information.css';
 
 const Information = () => {
@@ -24,58 +27,60 @@ const Information = () => {
     }, [name, email, password]); // Run effect whenever one of the inputs changes
 
     return (
-        <Container>
-            <div className="account-selection-container">
-                <WelcomeSection />
+        <Suspense fallback={<div>Loading...</div>}>
+            <Container>
+                <div className="account-selection-container">
+                    <WelcomeSection />
 
-                <div className="selection-section">
-                    <Progress currentPage={currentPage} />
-                    <h1>Enter Your Information</h1>
-                    <p>Please enter your personal information to complete the registration process.</p>
-                    <div className="form">
-                        {/* Name Input */}
-                        <label htmlFor="name-input">Name</label>
-                        <input
-                            type="text"
-                            id="name-input"
-                            value={name}
-                            onChange={handleNameChange}
-                            className="text-input"
-                            placeholder="Enter your name"
-                        />
+                    <div className="selection-section">
+                        <Progress currentPage={currentPage} />
+                        <h1>Enter Your Information</h1>
+                        <p>Please enter your personal information to complete the registration process.</p>
+                        <div className="form">
+                            {/* Name Input */}
+                            <label htmlFor="name-input">Name</label>
+                            <input
+                                type="text"
+                                id="name-input"
+                                value={name}
+                                onChange={handleNameChange}
+                                className="text-input"
+                                placeholder="Enter your name"
+                            />
 
-                        {/* Email Input */}
-                        <label htmlFor="email-input">Email</label>
-                        <input
-                            type="email"
-                            id="email-input"
-                            value={email}
-                            onChange={handleEmailChange}
-                            className="text-input"
-                            placeholder="Enter your email"
-                        />
+                            {/* Email Input */}
+                            <label htmlFor="email-input">Email</label>
+                            <input
+                                type="email"
+                                id="email-input"
+                                value={email}
+                                onChange={handleEmailChange}
+                                className="text-input"
+                                placeholder="Enter your email"
+                            />
 
-                        {/* Password Input */}
-                        <label htmlFor="password-input">Password</label>
-                        <input
-                            type="password"
-                            id="password-input"
-                            value={password}
-                            onChange={handlePasswordChange}
-                            className="text-input"
-                            placeholder="Enter your password"
-                        />
+                            {/* Password Input */}
+                            <label htmlFor="password-input">Password</label>
+                            <input
+                                type="password"
+                                id="password-input"
+                                value={password}
+                                onChange={handlePasswordChange}
+                                className="text-input"
+                                placeholder="Enter your password"
+                            />
+                        </div>
+                        {/* Next button */}
+                        <button
+                            className={`next-button ${(name && email && password) ? 'active' : ''}`}
+                            disabled={!(name && email && password)}
+                        >
+                            Complete registration
+                        </button>
                     </div>
-                    {/* Next button */}
-                    <button
-                        className={`next-button ${(name && email && password) ? 'active' : ''}`}
-                        disabled={!(name && email && password)}
-                    >
-                        Complete registration
-                    </button>
                 </div>
-            </div>
-        </Container>
+            </Container>
+        </Suspense>
     );
 };
 

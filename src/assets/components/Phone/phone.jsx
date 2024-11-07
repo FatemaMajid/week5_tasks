@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import Container from "../Container/container";
-import WelcomeSection from "../Welcome/welcome";
-import Progress from "../ProgressLines/progress";
-import Description from '../PhoneDescription/description';
-import Flag from 'react-world-flags';
+
+// Dynamically import components
+const Container = React.lazy(() => import("../Container/container"));
+const WelcomeSection = React.lazy(() => import("../Welcome/welcome"));
+const Progress = React.lazy(() => import("../ProgressLines/progress"));
+const Description = React.lazy(() => import('../PhoneDescription/description'));
+const Flag = React.lazy(() => import('react-world-flags'));
+
 import './phone.css';
 
 const Phone = () => {
@@ -39,36 +42,37 @@ const Phone = () => {
     };
 
     return (
-        <Container>
-            <div className="account-selection-container">
-                <WelcomeSection />
+        <Suspense fallback={<div>Loading...</div>}>
+            <Container>
+                <div className="account-selection-container">
+                    <WelcomeSection />
 
-                <div className="selection-section">
-                    <Progress currentPage={currentPage} />
-                    <Description />
-                    <div className="phoneDiv">
-                        <label id='phoneLabel' htmlFor="country-code-wrapper">Phone number </label>
-                        <div className="phone-input-container">
-                            <div className="country-code-wrapper" id='country-code-wrapper'>
-                                <Flag code={flagCode} className="country-flag" />
+                    <div className="selection-section">
+                        <Progress currentPage={currentPage} />
+                        <Description />
+                        <div className="phoneDiv">
+                            <label id='phoneLabel' htmlFor="country-code-wrapper">Phone number </label>
+                            <div className="phone-input-container">
+                                <div className="country-code-wrapper" id='country-code-wrapper'>
+                                    <Flag code={flagCode} className="country-flag" />
+                                    <input
+                                        type="text"
+                                        value={countryCode}
+                                        onChange={handleCountryCodeChange}
+                                        maxLength={4}
+                                        className={`country-code-input  ${countryCode ? 'active' : ''} `}
+                                        placeholder="+964"
+                                    />
+                                </div>
+
                                 <input
-                                    type="text"
-                                    value={countryCode}
-                                    onChange={handleCountryCodeChange}
-                                    maxLength={4}
-                                    className={`country-code-input  ${countryCode ? 'active' : ''} `}
-                                    placeholder="+964"
+                                    type="tel"
+                                    value={phoneNumber}
+                                    onChange={handlePhoneChange}
+                                    maxLength={10}
+                                    className={`phone-number-input ${phoneNumber ? 'active' : ''}`}
+                                    placeholder="Enter your phone number"
                                 />
-                            </div>
-
-                            <input
-                                type="tel"
-                                value={phoneNumber}
-                                onChange={handlePhoneChange}
-                                maxLength={10}
-                                className={`phone-number-input ${phoneNumber ? 'active' : ''}`}
-                                placeholder="Enter your phone number"
-                            />
                             </div>
                         </div>
                         <Link
@@ -88,7 +92,8 @@ const Phone = () => {
                         </Link>
                     </div>
                 </div>
-        </Container>
+            </Container>
+        </Suspense>
     );
 };
 

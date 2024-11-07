@@ -39,8 +39,9 @@
 
 .options {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 5px;
+  margin-top: 10px;
+  padding-left: 60px;
 }
 
 .option-card {
@@ -54,14 +55,13 @@
   transition: background-color 0.3s, color 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* Center content vertically */
-  align-items: center;      /* Center content horizontally */
-  text-align: center;       /* Ensure text is centered */
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;       
 }
 
-/* Add a different background color and text color for selected card */
 .option-card.selected {
-  background-color: #ECF6F9; /* Change to your preferred color */
+  background-color: #ECF6F9; 
   color: black; 
   border: 1px solid #3C97AF;
 }
@@ -79,13 +79,12 @@
   margin-top: 340px;
   color: #999999;
   cursor: pointer;
-  background-color: #ccc; /* Initial color */
+  background-color: #ccc; 
   transition: background-color 0.3s;
 }
 
-/* Change button color when active */
 .next-button.active {
-  background-color: #3C97AF; /* Change to your preferred color */
+  background-color: #3C97AF; 
   color: #ffffff;
   cursor: pointer;
 }

@@ -9,23 +9,21 @@
   
   .line div {
     width: 100px;
-    border: 6px solid #EBEBEB;
+    border: 2px solid #EBEBEB;
     border-radius: 5px;
   }
   
   .l1,
   .l2,
   .l3 {
-    height: 2px;
+    height: 6px;
   }
   
-  /* Fully colored line */
   .colored {
     border: 6px solid #3C97AF;
     background-color: #3C97AF;
   }
   
-  /* Half-colored line for l2 */
   .half-colored {
     background: linear-gradient(to right, #3C97AF 50%, transparent 50%);
     border-color: #3C97AF;

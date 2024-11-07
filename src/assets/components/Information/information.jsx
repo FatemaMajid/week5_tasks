@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from "../Container/container";
 import WelcomeSection from "../Welcome/welcome";
 import Progress from "../ProgressLines/progress";
-import Description from '../PhoneDescription/description';
 import './information.css';
 
 const Information = () => {
-    const [currentPage] = useState(3); 
+    const [currentPage, setCurrentPage] = useState(3); // Modify this to set state dynamically
     const [name, setName] = useState(""); // State for name
     const [email, setEmail] = useState(""); // State for email
     const [password, setPassword] = useState(""); // State for password
@@ -15,6 +14,15 @@ const Information = () => {
     const handleEmailChange = (e) => setEmail(e.target.value);
     const handlePasswordChange = (e) => setPassword(e.target.value);
 
+    // Update currentPage when all inputs are filled
+    useEffect(() => {
+        if (name && email && password) {
+            setCurrentPage(3.5);
+        } else {
+            setCurrentPage(3); // Reset to 3 if not all inputs are filled
+        }
+    }, [name, email, password]); // Run effect whenever one of the inputs changes
+
     return (
         <Container>
             <div className="account-selection-container">
@@ -22,7 +30,8 @@ const Information = () => {
 
                 <div className="selection-section">
                     <Progress currentPage={currentPage} />
-                    <Description />
+                    <h1>Enter Your Information</h1>
+                    <p>Please enter your personal information to complete the registration process.</p>
                     <div className="form">
                         {/* Name Input */}
                         <label htmlFor="name-input">Name</label>

@@ -1,11 +1,9 @@
-/* Container for the entire layout */
 .account-selection-container {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    height: 100vh;
+    height: 100px;
 }
 
-/* Section for the inputs and verification */
 .selection-section {
     grid-column: 2 / 3;
     padding: 2rem;
@@ -43,21 +41,19 @@
     margin-bottom: 15px;
 }
 
-/* Button styling for Next button */
 .next-button {
     background-color: #ccc;
     color: #fff;
     cursor: not-allowed;
     border: none;
     padding: 12px 24px;
-    border-radius: 5px;
+    border-radius: 36px;
     font-size: 16px;
     font-weight: bold;
     transition: background-color 0.3s ease;
     margin-top: 250px;
 }
 
-/* Active state for next button when all fields are filled */
 .next-button.active {
     background-color: #3C97AF;
     cursor: pointer;

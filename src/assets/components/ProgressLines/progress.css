@@ -28,4 +28,10 @@
     background: linear-gradient(to right, #3C97AF 50%, transparent 50%);
     border-color: #3C97AF;
   }
-  
+
+   @media (max-width: 620px)  {
+    .line {
+      align-items: left;
+      justify-content: left;
+    }
+    }

@@ -44,3 +44,13 @@
 
 
 }
+@media (max-width: 620px) and (min-width: 450px) {
+    .welcome-section{
+        display: none;
+    }
+}
+@media (max-width: 450px) and (min-width: 200px) {
+    .welcome-section{
+        display: none;
+    }
+}

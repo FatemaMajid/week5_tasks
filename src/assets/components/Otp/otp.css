@@ -14,58 +14,25 @@
     margin-top: 2px;
 }
 
-.phoneDiv #phoneLabel {
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 21px;
-    text-align: left;
-    color: #0A0A0A;
-}
-
-.phone-input-container {
+.timer-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    margin-top: 20px; 
 }
 
-.country-code-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 0 10px;
-    border: 1px solid #EBEBEB;
-    border-radius: 4px;
-    height: 48px;
-}
-
-.country-flag {
-    width: 20px;
-    height: 15px;
-}
-
-.country-code-input {
-    width: 60px;
-    padding: 5px;
-    font-size: 16px;
-    border: none;
-    background-color: transparent;
+.timer {
     text-align: center;
+    font-size: 16px; 
     font-weight: bold;
 }
 
-.phone-number-input {
-    width: 500px;
-    padding: 5px;
-    font-size: 16px;
-    border: 1px solid #EBEBEB;
-    border-radius: 4px;
-    height: 48px;
+.timer span {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
-.input-active {
-    border: 1px solid #3C97AF;
-}
+
 
 .next-button {
     width: 600px;
@@ -87,11 +54,6 @@
 }
 
 @media (max-width: 620px) and (min-width: 450px) {
-    .phoneDiv {
-        width: 345px;
-        justify-content: space-between;
-
-    }
 
     .next-button {
         width: 400px;

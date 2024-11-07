@@ -69,25 +69,25 @@ const Phone = () => {
                                 className={`phone-number-input ${phoneNumber ? 'active' : ''}`}
                                 placeholder="Enter your phone number"
                             />
+                            </div>
                         </div>
-                    </div>
-                    <Link
-                        to={phoneNumber.length === 10 ? "/information" : "#"}
-                        onClick={(e) => {
-                            if (phoneNumber.length !== 10) {
-                                e.preventDefault();
-                            }
-                        }}
-                    >
-                        <button
-                            className={`next-button ${phoneNumber.length === 10 ? 'active' : ''}`}
-                            disabled={phoneNumber.length !== 10}
+                        <Link
+                            to={phoneNumber.length === 10 ? "/otp" : "#"}
+                            onClick={(e) => {
+                                if (phoneNumber.length !== 10) {
+                                    e.preventDefault();
+                                }
+                            }}
                         >
-                            Send verification code
-                        </button>
-                    </Link>
+                            <button
+                                className={`next-button ${phoneNumber.length === 10 ? 'active' : ''}`}
+                                disabled={phoneNumber.length !== 10}
+                            >
+                                Send verification code
+                            </button>
+                        </Link>
+                    </div>
                 </div>
-            </div>
         </Container>
     );
 };

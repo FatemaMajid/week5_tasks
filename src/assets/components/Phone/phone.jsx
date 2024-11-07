@@ -25,9 +25,9 @@ const Phone = () => {
         const value = e.target.value;
         setPhoneNumber(value);
         if (value.length === 10) {
-            setCurrentPage(2.5); 
+            setCurrentPage(2.5);
         } else {
-            setCurrentPage(2); 
+            setCurrentPage(2);
         }
     };
 
@@ -56,7 +56,7 @@ const Phone = () => {
                                     value={countryCode}
                                     onChange={handleCountryCodeChange}
                                     maxLength={4}
-                                    className="country-code-input"
+                                    className={`country-code-input  ${countryCode ? 'active' : ''} `}
                                     placeholder="+964"
                                 />
                             </div>
@@ -66,7 +66,7 @@ const Phone = () => {
                                 value={phoneNumber}
                                 onChange={handlePhoneChange}
                                 maxLength={10}
-                                className="phone-number-input"
+                                className={`phone-number-input ${phoneNumber ? 'active' : ''}`}
                                 placeholder="Enter your phone number"
                             />
                         </div>

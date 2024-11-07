@@ -30,7 +30,7 @@ const SelectAccount = () => {
               className={`option-card ${selectedOption === 'freelancer' ? 'selected' : ''}`}
               onClick={() => handleSelectOption('freelancer')}
             >
-              <div className="icon">👤</div>
+              <div className="icon"><img src="./03_user.png" alt="" /></div>
               <h3>Freelancer</h3>
               <p>I'm a freelancer ready to work for projects</p>
             </div>
@@ -39,7 +39,7 @@ const SelectAccount = () => {
               className={`option-card ${selectedOption === 'client' ? 'selected' : ''}`}
               onClick={() => handleSelectOption('client')}
             >
-              <div className="icon">👥</div>
+              <div className="icon"><img src="./07_user-search-01.png" alt="" /></div>
               <h3>Client</h3>
               <p>I'm a client searching for talented freelancers</p>
             </div>

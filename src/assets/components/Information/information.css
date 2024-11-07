@@ -1,7 +1,7 @@
 /* Container for the entire layout */
 .account-selection-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2,1fr);
     height: 100vh;
 }
 

@@ -1,0 +1,33 @@
+.line {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 128px;
+  }
+  
+  .line div {
+    width: 100px;
+    border: 6px solid #EBEBEB;
+    border-radius: 5px;
+  }
+  
+  .l1,
+  .l2,
+  .l3 {
+    height: 2px;
+  }
+  
+  /* Fully colored line */
+  .colored {
+    border: 6px solid #3C97AF;
+    background-color: #3C97AF;
+  }
+  
+  /* Half-colored line for l2 */
+  .half-colored {
+    background: linear-gradient(to right, #3C97AF 50%, transparent 50%);
+    border-color: #3C97AF;
+  }
+  

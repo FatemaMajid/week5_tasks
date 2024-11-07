@@ -1,0 +1,46 @@
+.welcome-section {
+    grid-column: 1/2;
+    background-color: #3C97AF;
+    ;
+    color: white;
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 676px;
+    height: 960px;
+    border-radius: 20px;
+    padding-top: 100px;
+
+}
+
+.welcome-section h1 {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    width: 494px;
+    height: 120px;
+    top: 138px;
+    left: 91px;
+    padding-left: 100px;
+
+}
+
+.welcome-section p {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    width: 633px;
+    height: 150px;
+    top: 306px;
+    left: 22px;
+    padding-top: 20px;
+    padding-left: 20px;
+
+
+}

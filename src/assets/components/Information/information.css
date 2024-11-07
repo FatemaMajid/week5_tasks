@@ -1,0 +1,58 @@
+/* Container for the entire layout */
+.account-selection-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+/* Section for the inputs and verification */
+.selection-section {
+    grid-column: 2 / 3;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 620px;
+    height: 100%;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Label styling */
+label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0A0A0A;
+    margin-bottom: 5px;
+}
+
+/* Text input styling */
+.text-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Button styling for Next button */
+.next-button {
+    background-color: #ccc;
+    color: #fff;
+    cursor: not-allowed;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Active state for next button when all fields are filled */
+.next-button.active {
+    background-color: #3C97AF;
+    cursor: pointer;
+}

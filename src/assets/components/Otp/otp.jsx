@@ -1,13 +1,10 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-// Dynamically import components
-const Container = React.lazy(() => import("../Container/container"));
-const WelcomeSection = React.lazy(() => import("../Welcome/welcome"));
-const Progress = React.lazy(() => import("../ProgressLines/progress"));
-const Description = React.lazy(() => import('../PhoneDescription/description'));
-const OtpInput = React.lazy(() => import('react-otp-input'));
-
+import Container from "../Container/container";
+import WelcomeSection from "../Welcome/welcome";
+import Progress from "../ProgressLines/progress";
+import Description from '../PhoneDescription/description';
+import OtpInput from 'react-otp-input';
 import './otp.css';
 
 const Otp = () => {
@@ -33,63 +30,62 @@ const Otp = () => {
     const seconds = timer % 60;
 
     const handleResend = () => {
-        setTimer(59);
+        setTimer(59); s
         setTimerFinished(false);
         setOtp('');
     };
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <Container>
-                <div className="account-selection-container">
-                    <WelcomeSection />
-                    <div className="selection-section">
-                        <Progress currentPage={currentPage} />
-                        <Description />
+        <Container>
+            <div className="account-selection-container">
+                <WelcomeSection />
+                <div className="selection-section">
+                    <Progress currentPage={currentPage} />
+                    <Description />
 
-                        <div className="otp-input-section">
-                            <OtpInput
-                                value={otp}
-                                onChange={setOtp}
-                                numInputs={6}
-                                renderInput={(props) => <input {...props} className="otp-input" />}
-                            />
-                        </div>
+                    <div className="otp-input-section">
+                        <OtpInput
+                            value={otp}
+                            onChange={setOtp}
+                            numInputs={6}
+                            renderInput={(props) => <input {...props} className="otp-input" />}  // Add your own class
+                        />
 
-                        <div className="timer-container">
-                            <div className="timer">
-                                <img src="./clock-01.png" alt="" />
-                                {`${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`}
-                                <p>Didn't receive a message?
-                                    <span
-                                        style={{ color: timerFinished ? '#3C97AF' : '' }}
-                                        onClick={handleResend}
-                                    >
-                                        Resend
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <Link
-                            to={otp.length === 6 ? "/information" : "#"}
-                            onClick={(e) => {
-                                if (otp.length !== 6) {
-                                    e.preventDefault();
-                                }
-                            }}
-                        >
-                            <button
-                                className={`next-button ${otp.length === 6 ? 'active' : ''}`}
-                                disabled={otp.length !== 6}
-                            >
-                                Verify OTP
-                            </button>
-                        </Link>
                     </div>
+
+                    <div className="timer-container">
+                        <div className="timer">
+                            <img src="./clock-01.png" alt="" />
+                            {`${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`}
+                            <p>Didn't receive a message?
+                                <span
+                                    style={{ color: timerFinished ? '#3C97AF' : '' }}
+                                    onClick={handleResend}
+                                >
+                                    Resend
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <Link
+                        to={otp.length === 6 ? "/information" : "#"}
+                        onClick={(e) => {
+                            if (otp.length !== 6) {
+                                e.preventDefault();
+                            }
+                        }}
+                    >
+                        <button
+                            className={`next-button ${otp.length === 6 ? 'active' : ''}`}
+                            disabled={otp.length !== 6}
+                        >
+                            Verify OTP
+                        </button>
+                    </Link>
                 </div>
-            </Container>
-        </Suspense>
+            </div>
+        </Container>
     );
 };
 

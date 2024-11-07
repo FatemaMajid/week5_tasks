@@ -1,11 +1,9 @@
-import React, { useState, Suspense } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Container from "../Container/container";
 import WelcomeSection from "../Welcome/welcome";
+import Progress from "../ProgressLines/progress"; // Import Progress component
 import './selectAccount.css';
-
-// Dynamically import the Progress component
-const Progress = React.lazy(() => import("../ProgressLines/progress"));
 
 const SelectAccount = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -22,10 +20,8 @@ const SelectAccount = () => {
         <WelcomeSection />
 
         <div className="selection-section">
-          {/* Suspense wraps the dynamically imported Progress component */}
-          <Suspense fallback={<div>Loading...</div>}>
-            <Progress currentPage={currentPage} />
-          </Suspense>
+          {/* Progress component with currentPage */}
+          <Progress currentPage={currentPage} />
           <h1>Let’s Get started!</h1>
           <p>How do you plan to use this platform</p>
 

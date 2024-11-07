@@ -1,5 +1,5 @@
 import React from 'react';
-import './Progress.css';
+import './progress.css';
 
 const Progress = ({ currentPage }) => {
   return (

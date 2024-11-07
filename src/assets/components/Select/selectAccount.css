@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
+  align-items: center; /* Center items vertically */
+  justify-items: center; /* Center items horizontally */
 }
 
 .selection-section {
@@ -12,6 +14,10 @@
   height: 960px;
   gap: 10px;
   margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content inside this section */
+  justify-content: center; /* Center content vertically inside this section */
 }
 
 .selection-section h1 {
@@ -46,6 +52,11 @@
   border: 1px solid #EBEBEB;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Center content vertically */
+  align-items: center;      /* Center content horizontally */
+  text-align: center;       /* Ensure text is centered */
 }
 
 /* Add a different background color and text color for selected card */
@@ -61,7 +72,7 @@
 }
 
 .next-button {
-  width: 100%;
+  width: 600px;
   height: 56px;
   border: none;
   border-radius: 36px;
@@ -72,6 +83,7 @@
   transition: background-color 0.3s;
 }
 
+/* Change button color when active */
 .next-button.active {
   background-color: #3C97AF; /* Change to your preferred color */
   color: #ffffff;

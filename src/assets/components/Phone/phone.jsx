@@ -8,7 +8,7 @@ import Flag from 'react-world-flags';
 import './phone.css';
 
 const Phone = () => {
-    const [currentPage] = useState(2);
+    const [currentPage, setCurrentPage] = useState(2);
     const [phoneNumber, setPhoneNumber] = useState("");
     const [countryCode, setCountryCode] = useState("+964");
     const [flagCode, setFlagCode] = useState("IQ");
@@ -22,7 +22,13 @@ const Phone = () => {
     };
 
     const handlePhoneChange = (e) => {
-        setPhoneNumber(e.target.value);
+        const value = e.target.value;
+        setPhoneNumber(value);
+        if (value.length === 10) {
+            setCurrentPage(2.5); 
+        } else {
+            setCurrentPage(2); 
+        }
     };
 
     const handleCountryCodeChange = (e) => {
@@ -40,29 +46,30 @@ const Phone = () => {
                 <div className="selection-section">
                     <Progress currentPage={currentPage} />
                     <Description />
+                    <div className="phoneDiv">
+                        <label id='phoneLabel' htmlFor="country-code-wrapper">Phone number </label>
+                        <div className="phone-input-container">
+                            <div className="country-code-wrapper" id='country-code-wrapper'>
+                                <Flag code={flagCode} className="country-flag" />
+                                <input
+                                    type="text"
+                                    value={countryCode}
+                                    onChange={handleCountryCodeChange}
+                                    maxLength={4}
+                                    className="country-code-input"
+                                    placeholder="+964"
+                                />
+                            </div>
 
-                    <label htmlFor="country-code-wrapper">Phone number </label><br />
-                    <div className="phone-input-container">
-                        <div className="country-code-wrapper" id='country-code-wrapper'>
-                            <Flag code={flagCode} className="country-flag" />
                             <input
-                                type="text"
-                                value={countryCode}
-                                onChange={handleCountryCodeChange}
-                                maxLength={4}
-                                className="country-code-input"
-                                placeholder="+964"
+                                type="tel"
+                                value={phoneNumber}
+                                onChange={handlePhoneChange}
+                                maxLength={10}
+                                className="phone-number-input"
+                                placeholder="Enter your phone number"
                             />
                         </div>
-
-                        <input
-                            type="tel"
-                            value={phoneNumber}
-                            onChange={handlePhoneChange}
-                            maxLength={10}
-                            className="phone-number-input"
-                            placeholder="Enter your phone number"
-                        />
                     </div>
                     <Link
                         to={phoneNumber.length === 10 ? "/information" : "#"}
@@ -79,9 +86,6 @@ const Phone = () => {
                             Send verification code
                         </button>
                     </Link>
-
-
-
                 </div>
             </div>
         </Container>

@@ -14,7 +14,7 @@
     margin-top: 2px;
 }
 
-label {
+.phoneDiv #phoneLabel {
     font-family: Poppins;
     font-size: 14px;
     font-weight: bold;
@@ -55,7 +55,7 @@ label {
 }
 
 .phone-number-input {
-    width: 100%;
+    width: 500px;
     padding: 5px;
     font-size: 16px;
     border: 1px solid #EBEBEB;
@@ -68,7 +68,7 @@ label {
 }
 
 .next-button {
-    width: 100%; /* Full width for button */
+    width: 600px; /* Full width for button */
     background-color: #ccc;
     color: #fff;
     cursor: not-allowed;

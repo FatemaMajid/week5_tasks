@@ -6,7 +6,7 @@ const Progress = ({ currentPage }) => {
     <div className="line">
       <div className={`l1 ${currentPage >= 1 ? 'colored' : ''}`}></div>
       <div className={`l2 ${currentPage >= 2 ? (currentPage === 2 ? 'half-colored' : 'colored') : ''}`}></div>
-      <div className={`l2 ${currentPage >= 3 ? (currentPage === 3 ? 'half-colored' : 'colored') : ''}`}></div>
+      <div className={`l3 ${currentPage >= 3 ? (currentPage === 3 ? 'half-colored' : 'colored') : ''}`}></div>
     </div>
   );
 };

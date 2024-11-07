@@ -5,7 +5,6 @@ import Container from "../Container/container";
 
 const WelcomeSection = () => {
   return (
-    <Container>
     <div className="welcome-section">
     <h1>Welcome to Your Freelancing Hub!</h1>
     <p>
@@ -15,7 +14,6 @@ const WelcomeSection = () => {
       are made, and ideas come to reality. Let's start building something amazing together!
     </p>
   </div>
-  </Container>
   );
 };
 

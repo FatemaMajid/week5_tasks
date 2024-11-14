@@ -53,7 +53,7 @@
     width: 40px;
 }
 
-.createProject .insertForm .headerOfofrm {
+.createProject .insertForm .formheader {
     width: 100%;
     display: flex;
     align-items: center;
@@ -62,25 +62,25 @@
     margin-top: 20px;
 }
 
-.createProject .insertForm .headerOfofrm .one,
-.createProject .insertForm .headerOfofrm .tow {
+.createProject .insertForm .formheader .one,
+.createProject .insertForm .formheader .tow {
     width: 100%;
     height: 6px;
     background-color: var(--Color-Border-Neutral, rgba(191, 191, 191, 1));
     border-radius: 16px;
 }
 
-.createProject .insertForm .headerOfofrm .tow {
+.createProject .insertForm .formheader .tow {
     background-color: var(--Color-Border-Primary, rgba(60, 151, 175, 1));
 }
 
-.createProject .insertForm .firstinsertForm {
+.createProject .insertForm .selection {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
 }
 
-.createProject .insertForm .firstinsertForm p {
+.createProject .insertForm .selection p {
     font-family: Poppins, sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -88,7 +88,7 @@
     margin-bottom: 10px;
 }
 
-.createProject .insertForm .firstinsertForm select {
+.createProject .insertForm .selection select {
     color: rgba(217, 217, 217, 1);
     border: 1px solid var(--Color-Border-Neutral, rgba(191, 191, 191, 1));
     height: 48px;
@@ -101,7 +101,7 @@
     padding: 0 10px;
 }
 
-.createProject .insertForm .firstinsertForm select:focus {
+.createProject .insertForm .selection select:focus {
     border: 1px solid var(--Color-Border-Primary, rgba(60, 151, 175, 1));
     color: var(--Color-Border-Primary, rgba(60, 151, 175, 1));
     outline: none;
@@ -150,7 +150,7 @@
         font-size: 28px;
     }
 
-    .createProject .insertForm .firstinsertForm select {
+    .createProject .insertForm .selection select {
         font-size: 12px;
     }
 }

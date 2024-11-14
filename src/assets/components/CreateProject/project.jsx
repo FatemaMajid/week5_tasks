@@ -15,11 +15,11 @@ const Project = ({ FlageForm, onClose }) => {
                         <img src="./closebtn.png" alt="Hide Form" />
                     </button>
                 </div>
-                <div className="headerOfofrm">
+                <div className="formheader">
                     <div className="tow"></div>
                     <div className="one"></div>
                 </div>
-                <div className="firstinsertForm">
+                <div className="selection">
                     <p>Select Required Qualifications</p>
                     <select name="qualification" id="qualification">
                         <option className='placeholderOfselecter' disabled selected hidden>

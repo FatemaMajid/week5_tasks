@@ -1,4 +1,4 @@
-.FormtocreateProject {
+.createProject {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -10,7 +10,7 @@
     z-index: 9999;
 }
 
-.FormtocreateProject .insertForm {
+.createProject .insertForm {
     position: relative;
     width: 40%;
     max-width: 600px;
@@ -22,7 +22,7 @@
     padding: 20px;
 }
 
-.FormtocreateProject .insertForm .title {
+.createProject .insertForm .title {
     width: 100%;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@
     margin-bottom: 20px;
 }
 
-.FormtocreateProject .insertForm .title h1 {
+.createProject .insertForm .title h1 {
     font-family: Nunito Sans, sans-serif;
     font-size: 32px;
     font-weight: 700;
@@ -39,7 +39,7 @@
     margin: 0;
 }
 
-.FormtocreateProject .insertForm .title button {
+.createProject .insertForm .title button {
     background-color: transparent;
     border: none;
     display: flex;
@@ -49,11 +49,11 @@
     /* Ensure button has a pointer cursor */
 }
 
-.FormtocreateProject .insertForm .title button img {
+.createProject .insertForm .title button img {
     width: 40px;
 }
 
-.FormtocreateProject .insertForm .headerOfofrm {
+.createProject .insertForm .headerOfofrm {
     width: 100%;
     display: flex;
     align-items: center;
@@ -62,25 +62,25 @@
     margin-top: 20px;
 }
 
-.FormtocreateProject .insertForm .headerOfofrm .one,
-.FormtocreateProject .insertForm .headerOfofrm .tow {
+.createProject .insertForm .headerOfofrm .one,
+.createProject .insertForm .headerOfofrm .tow {
     width: 100%;
     height: 6px;
     background-color: var(--Color-Border-Neutral, rgba(191, 191, 191, 1));
     border-radius: 16px;
 }
 
-.FormtocreateProject .insertForm .headerOfofrm .tow {
+.createProject .insertForm .headerOfofrm .tow {
     background-color: var(--Color-Border-Primary, rgba(60, 151, 175, 1));
 }
 
-.FormtocreateProject .insertForm .firstinsertForm {
+.createProject .insertForm .firstinsertForm {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
 }
 
-.FormtocreateProject .insertForm .firstinsertForm p {
+.createProject .insertForm .firstinsertForm p {
     font-family: Poppins, sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -88,7 +88,7 @@
     margin-bottom: 10px;
 }
 
-.FormtocreateProject .insertForm .firstinsertForm select {
+.createProject .insertForm .firstinsertForm select {
     color: rgba(217, 217, 217, 1);
     border: 1px solid var(--Color-Border-Neutral, rgba(191, 191, 191, 1));
     height: 48px;
@@ -101,13 +101,13 @@
     padding: 0 10px;
 }
 
-.FormtocreateProject .insertForm .firstinsertForm select:focus {
+.createProject .insertForm .firstinsertForm select:focus {
     border: 1px solid var(--Color-Border-Primary, rgba(60, 151, 175, 1));
     color: var(--Color-Border-Primary, rgba(60, 151, 175, 1));
     outline: none;
 }
 
-.FormtocreateProject .insertForm .description .descriptiontext {
+.createProject .insertForm .description .descriptiontext {
     width: 100%;
     height: 207px;
     /* padding: 0 10px ; */
@@ -123,7 +123,7 @@
 
 }
 
-.FormtocreateProject .insertForm .description .des-p {
+.createProject .insertForm .description .des-p {
     color: var(--Color-Text-Primary, #0A0A0A);
 
     font-size: 14px;
@@ -134,23 +134,23 @@
     text-decoration-skip-ink: none;
 
 }
-.FormtocreateProject .insertForm .description input:focus {
+.createProject .insertForm .description input:focus {
     border: 1px solid var(--Color-Border-Primary, rgba(60, 151, 175, 1));
     color: var(--Color-Border-Primary, rgba(60, 151, 175, 1));
     outline: none;
 }
 
 @media (max-width: 768px) {
-    .FormtocreateProject .insertForm {
+    .createProject .insertForm {
         width: 80%;
         min-height: 400px;
     }
 
-    .FormtocreateProject .insertForm .title h1 {
+    .createProject .insertForm .title h1 {
         font-size: 28px;
     }
 
-    .FormtocreateProject .insertForm .firstinsertForm select {
+    .createProject .insertForm .firstinsertForm select {
         font-size: 12px;
     }
 }

@@ -7,7 +7,7 @@ const Project = ({ FlageForm, onClose }) => {
     }, [FlageForm]);
 
     return (
-        <div className="FormtocreateProject" style={{ display: FlageForm ? 'block' : 'none' }}>
+        <div className="createProject" style={{ display: FlageForm ? 'block' : 'none' }}>
             <div className="insertForm">
                 <div className="title">
                     <h1>Create a Project</h1>

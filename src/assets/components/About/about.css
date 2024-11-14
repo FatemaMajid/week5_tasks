@@ -1,0 +1,146 @@
+.bodyOfindexpage{
+    position: relative;
+}
+.AboutScreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.AboutScreen .userInfo .photo img{
+    margin-bottom: 10px;
+}
+.AboutScreen .userInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--Color-Background-White, rgba(255, 255, 255, 1));
+    box-shadow: 0px 2px 8px 0px rgba(33, 134, 142, 0.12);
+    text-align: center;
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px 10px;
+}
+.AboutScreen .userInfo h1{
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+margin-bottom: 10px;
+}
+.AboutScreen .userInfo .rate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Color-Text-Secondary, rgba(153, 153, 153, 1));
+    font-family: Nunito Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13.64px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
+}
+.AboutScreen .userInfo button{
+    height:40px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background: var(--Colors-Primary-500, rgba(60, 151, 175, 1));
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-align: center;
+}
+.AboutScreen .aboutuser ,.AboutScreen .projectHistory{
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    background: var(--Color-Background-White, rgba(255, 255, 255, 1));
+    box-shadow: 0px 2px 8px 0px rgba(33, 134, 142, 0.12);
+    width: 100%;
+    border-radius: 15px;
+}
+.AboutScreen .aboutuser .titleabout , .AboutScreen .projectHistory .titleabout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.AboutScreen .aboutuser .titleabout h1 , .AboutScreen .projectHistory .titleabout h1{
+font-size: 18px;
+font-weight: 600;
+line-height: 22.5px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+.AboutScreen .aboutuser .description p{
+    margin-top: 10px;
+    color: var(--Color-Text-Secondary, rgba(153, 153, 153, 1));
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.AboutScreen .projectHistory .titleabout .imges img{
+   margin-left: 15px;
+}
+.AboutScreen .projectHistory .project{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+   
+}
+/* .AboutScreen .projectHistory .project .text{
+    border-left: 3px ;
+    border-color:  rgba(60, 151, 175, 1);
+} */
+.AboutScreen .projectHistory .project h1{
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+.AboutScreen .projectHistory .project h4{
+    color: var(--Color-Text-Secondary, rgba(153, 153, 153, 1));
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.AboutScreen .projectHistory .project p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+}
+.aboutuser .titleabout button{
+    background-color: transparent;
+    border: none;
+}
+.aboutuser .description textarea{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #66666621;
+    background-color: rgba(141, 141, 141, 0.096);
+}
+.AboutScreen .userInfo input{
+    border: none;
+    text-align: center;
+    border: 1px solid #66666621;
+    margin-top: 6px;
+}

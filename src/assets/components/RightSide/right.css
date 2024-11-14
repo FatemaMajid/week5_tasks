@@ -1,0 +1,145 @@
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+}
+
+.right .projectsSection, .right .freelancersSection {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 2px 8px rgba(33, 134, 142, 0.12);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.right .projectsSection .header, .right .freelancersSection .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.right .projectsSection h1, .right .freelancersSection h1 {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3C97AF;
+}
+
+.right .projectsSection a, .right .freelancersSection a {
+    color: #3C97AF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.right .projectsSection .projectItem, .right .freelancersSection .freelancerItem {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.right .projectsSection .projectDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right .projectsSection .projectInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.right .projectsSection .projectItem img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.right .projectsSection .text h1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.right .projectsSection .text p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.right .projectsSection .projectItem button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.right .projectsSection .description {
+    font-size: 14px;
+    color: #666;
+    display: none;
+}
+
+.right .projectsSection .description.visible {
+    display: block;
+}
+
+.right .freelancersSection .freelancerInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right .freelancersSection .freelancerDetails {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.right .freelancersSection .freelancerItem img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.right .freelancersSection .text h1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.right .freelancersSection .text p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.right .freelancersSection .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.right .freelancersSection .rating img {
+    width: 15px;
+    height: 15px;
+}
+
+.right .freelancersSection .rating span {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}

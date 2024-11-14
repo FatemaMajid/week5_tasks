@@ -1,0 +1,18 @@
+.middleHome {
+    display: flex;
+    flex-direction: row;
+    gap: 40px; 
+    padding: 20px;
+    background-color: var(--colors-primary-25, rgba(247, 253, 253, 1));
+}
+
+.middleHome > * {
+    flex: 1; 
+}
+.middleHome .about {
+    flex: 0.3; 
+}
+
+.middleHome .posts {
+    flex: 0.7; 
+}

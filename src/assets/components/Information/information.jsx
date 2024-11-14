@@ -3,6 +3,7 @@ import Container from "../Container/container";
 import WelcomeSection from "../Welcome/welcome";
 import Progress from "../ProgressLines/progress";
 import './information.css';
+import { Link } from 'react-router-dom';
 
 const Information = () => {
     const [currentPage, setCurrentPage] = useState(3); // Modify this to set state dynamically
@@ -67,12 +68,16 @@ const Information = () => {
                         />
                     </div>
                     {/* Next button */}
+                    <Link
+                     to={"/home"}
+                     >
                     <button
                         className={`next-button ${(name && email && password) ? 'active' : ''}`}
                         disabled={!(name && email && password)}
                     >
                         Complete registration
                     </button>
+                    </Link>
                 </div>
             </div>
         </Container>

@@ -1,0 +1,126 @@
+.notificationPageCode {
+    position: absolute;
+    box-shadow: 1px 2px 8px 0px rgba(33, 134, 142, 0.25);
+    background: var(--Color-Background-White, rgba(255, 255, 255, 1));
+    width: 500px;
+    top: 62px;
+    right: 14px;
+    border-radius: 8px;
+    z-index: 1;
+    display: none; 
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.notificationPageCode.show {
+    display: flex; 
+    opacity: 1; 
+}
+
+.notificationPageCode.hide {
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+.notificationPageCode h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.notificationPageCode p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.notificationPageCode p a {
+    color: var(--Color-Primary-Primary, rgba(60, 151, 175, 1));
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.notificationPageCode .Today .item,
+.notificationPageCode .ThisWeek .item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    height: 90px;
+    border-bottom: 0.5px solid var(--Colors-Neutral-200, rgba(217, 217, 217, 1));
+    padding-bottom: 10px;
+}
+
+.notificationPageCode .Today .item p, 
+.notificationPageCode .ThisWeek .item p {
+    width: 240px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: black;
+}
+
+.notificationPageCode .Today .item p span, 
+.notificationPageCode .ThisWeek .item p span {
+    color: var(--Color-Border-Neutral, rgba(191, 191, 191, 1));
+}
+
+.notificationPageCode .ThisWeek {
+    margin-top: 20px;
+}
+
+.notificationPageCode .ThisWeek .item {
+    height: 76px;
+}
+
+.notificationPageCode img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .notificationPageCode {
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 10px;
+        padding: 15px;
+    }
+
+    .notificationPageCode h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .notificationPageCode p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .notificationPageCode .Today .item,
+    .notificationPageCode .ThisWeek .item {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 10px;
+        padding-bottom: 15px;
+    }
+
+    .notificationPageCode .Today .item p, 
+    .notificationPageCode .ThisWeek .item p {
+        width: auto;
+    }
+}

@@ -1,0 +1,215 @@
+.Midelinformation{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 43%;
+    gap: 20px;
+}
+.Midelinformation .createproject ,.Midelinformation .postsharing{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--Color-Background-White, rgba(255, 255, 255, 1));
+    box-shadow: 0px 2px 8px 0px rgba(33, 134, 142, 0.12);
+    text-align: center;
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px 10px;
+    gap: 5px;
+}
+.Midelinformation .createproject img{
+    width: 75px;
+}
+.Midelinformation .createproject .projectInput{
+    width: 513px;
+height: 52px;
+padding: 10px 24px 10px 24px;
+border-radius: 30px;
+border: 1px solid #EBEBEB;
+background: var(--colors-neutral-25, #FAFAFA);
+opacity: 0px;
+
+}
+.Midelinformation .createproject button{
+    border: none;
+    border: 1px solid var(--Colors-Neutral-100, rgba(235, 235, 235, 1));
+    width: 100%;
+    height:  52px;
+    border-radius: 15px;
+    padding-left: 20px;
+    color: var(--text-secondary, rgba(128, 128, 128, 1));
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.Midelinformation .createproject button:hover{
+    color: white ;
+    background-color:  var(--text-secondary, rgba(128, 128, 128, 1));
+}
+.Midelinformation .createproject .insertimg{
+    position: absolute;
+    right: 30px;
+    top: 36px;
+}
+.Midelinformation .createproject .insertimg img{
+    width: 32px;
+}
+.Midelinformation .postsharing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: var(--Color-Background-White, rgba(255, 255, 255, 1));
+    box-shadow: 0px 2px 8px 0px rgba(33, 134, 142, 0.12);
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px 10px;
+}
+.Midelinformation .postsharing .sender{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.Midelinformation .postsharing .sender .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Midelinformation .postsharing .sender .info .imgsender{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--colors-Disable-Primary, rgba(235, 235, 235, 1));
+}
+.Midelinformation .postsharing .sender .info .textuser{
+    margin-left: 10px;
+}
+.Midelinformation .postsharing .sender .info .textuser h1{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+}
+.Midelinformation .postsharing .sender .otheroptionPost{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.Midelinformation .postsharing .sender .info .textuser p{
+    color: var(--colors-Text-Secondary, rgba(128, 128, 128, 1));
+    font-family: Source Sans Pro;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.Midelinformation .postsharing .sender  button.Available{
+    background: var(--Colors-Success-100, rgba(221, 248, 231, 1));
+    width: 92px;
+    height: 35px;
+    border-radius: 15px;
+    color: var(--colors-Success-primary, rgba(77, 178, 81, 1));
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.Midelinformation .postsharing .sender  button.Dotes{
+    background-color: transparent;
+    border: none;
+    align-items: center;
+}
+.Midelinformation .postsharing .postDetails{
+    margin-top: 10px;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.Midelinformation .postsharing .postDetails h1{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
+}
+.Midelinformation .postsharing .postDetails p{
+    color: var(--Color-Text-Secondary, rgba(153, 153, 153, 1));
+    font-family: Source Sans Pro;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
+}
+.Midelinformation .postsharing .postDetails img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.Midelinformation .postsharing .postDetails .action {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 35px;
+}
+.Midelinformation .postsharing .postDetails .action .actionoption{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Midelinformation .postsharing .postDetails .action  img{
+    width: 24px;
+}
+.Midelinformation .postsharing .postDetails .action  p{
+    margin-left: 4px;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+align-items: center;
+}
+.postDetails .title button{
+    color: var(--Color-Primary-Primary, rgba(60, 151, 175, 1));
+    border: none;
+    background-color: transparent;
+}
+.action .actionoption button{
+    background-color: transparent;
+    border: none;
+}
+.icon {
+    fill: none; /* Default color */
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+.icon.clicked {
+    fill: red; /* Color when clicked */
+}
+
+
+/* @media screen And (max-width: 1488px){
+    .Midelinformation{
+        width: calc(100% - 820px);
+    }
+} */

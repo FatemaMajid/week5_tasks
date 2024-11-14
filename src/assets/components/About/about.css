@@ -1,16 +1,16 @@
 .bodyOfindexpage{
     position: relative;
 }
-.AboutScreen{
+.about-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
-.AboutScreen .userInfo .photo img{
+.about-container .profile-info .profile-photo img{
     margin-bottom: 10px;
 }
-.AboutScreen .userInfo{
+.about-container .profile-info{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,15 +22,15 @@
     border-radius: 15px;
     padding: 15px 10px;
 }
-.AboutScreen .userInfo h1{
-font-size: 16px;
-font-weight: 700;
-line-height: 20px;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-margin-bottom: 10px;
+.about-container .profile-info h1{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
 }
-.AboutScreen .userInfo .rate{
+.about-container .profile-info .profile-rating{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,7 +43,7 @@ margin-bottom: 10px;
     text-decoration-skip-ink: none;
     margin-bottom: 10px;
 }
-.AboutScreen .userInfo button{
+.about-container .profile-info button{
     height:40px;
     width: 100%;
     border: none;
@@ -57,7 +57,7 @@ margin-bottom: 10px;
     text-decoration-skip-ink: none;
     text-align: center;
 }
-.AboutScreen .aboutuser ,.AboutScreen .projectHistory{
+.about-container .about-section, .about-container .projects-history{
     padding: 15px 10px;
     display: flex;
     flex-direction: column;
@@ -66,20 +66,20 @@ margin-bottom: 10px;
     width: 100%;
     border-radius: 15px;
 }
-.AboutScreen .aboutuser .titleabout , .AboutScreen .projectHistory .titleabout{
+.about-container .about-section .about-header, .about-container .projects-history .projects-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.AboutScreen .aboutuser .titleabout h1 , .AboutScreen .projectHistory .titleabout h1{
-font-size: 18px;
-font-weight: 600;
-line-height: 22.5px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+.about-container .about-section .about-header h1, .about-container .projects-history .projects-header h1{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 }
-.AboutScreen .aboutuser .description p{
+.about-container .about-section .about-description p{
     margin-top: 10px;
     color: var(--Color-Text-Secondary, rgba(153, 153, 153, 1));
     font-size: 14px;
@@ -89,30 +89,25 @@ text-decoration-skip-ink: none;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-.AboutScreen .projectHistory .titleabout .imges img{
+.about-container .projects-history .projects-header .project-actions img{
    margin-left: 15px;
 }
-.AboutScreen .projectHistory .project{
+.about-container .projects-history .project-entry{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
     margin-top: 10px;
-   
 }
-/* .AboutScreen .projectHistory .project .text{
-    border-left: 3px ;
-    border-color:  rgba(60, 151, 175, 1);
-} */
-.AboutScreen .projectHistory .project h1{
-font-size: 16px;
-font-weight: 500;
-line-height: 24px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+.about-container .projects-history .project-entry .project-info h1{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 }
-.AboutScreen .projectHistory .project h4{
+.about-container .projects-history .project-entry .project-info h4{
     color: var(--Color-Text-Secondary, rgba(153, 153, 153, 1));
     font-size: 12px;
     font-weight: 400;
@@ -121,24 +116,24 @@ text-decoration-skip-ink: none;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-.AboutScreen .projectHistory .project p{
+.about-container .projects-history .project-entry .project-info p{
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
     text-align: left;
     text-decoration-skip-ink: none;
 }
-.aboutuser .titleabout button{
+.about-section .about-header button{
     background-color: transparent;
     border: none;
 }
-.aboutuser .description textarea{
+.about-section .about-description textarea{
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #66666621;
     background-color: rgba(141, 141, 141, 0.096);
 }
-.AboutScreen .userInfo input{
+.about-container .profile-info input{
     border: none;
     text-align: center;
     border: 1px solid #66666621;

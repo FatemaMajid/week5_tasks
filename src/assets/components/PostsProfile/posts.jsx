@@ -1,11 +1,13 @@
 import './posts.css';
 import { useState } from 'react';
+import Project from "../CreateProject/project";
+
 
 const ActionOption = ({ label }) => {
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = () => {
-        setIsClicked(!isClicked); 
+        setIsClicked(!isClicked);
     };
 
     return (
@@ -17,8 +19,8 @@ const ActionOption = ({ label }) => {
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
-            >                
-            <path d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.22172 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round" />
+            >
+                <path d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.22172 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round" />
             </svg>
             <p>{label}</p>
         </div>
@@ -71,15 +73,22 @@ const Post = ({ clientName, postedTime, title, description, image, duration, pri
 );
 
 const Posts = () => {
+    const [isFormVisible, setIsFormVisible] = useState(false);
+
+    const openForm = () => setIsFormVisible(true);
+    const closeForm = () => setIsFormVisible(false);
     return (
-        <div className="Midelinformation">
+        <div className="post">
             <div className="createproject">
                 <img src="./user.png" alt="user" />
                 <input type="text" className="projectInput" placeholder='Mustafa, let’s create a project!' />
-                <div className="insertimg">
+                <div className="insertimg" onClick={openForm}>
                     <img src="./button.png" alt="insert" />
                 </div>
+
             </div>
+            {/* Modal to create project */}
+            <Project FlageForm={isFormVisible} onClose={closeForm} />
 
             <Post
                 clientName="Client Name"

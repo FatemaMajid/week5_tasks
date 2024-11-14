@@ -1,4 +1,4 @@
-.Midelinformation{
+.post{
     position: relative;
     display: flex;
     align-items: center;
@@ -7,7 +7,7 @@
     width: 43%;
     gap: 20px;
 }
-.Midelinformation .createproject ,.Midelinformation .postsharing{
+.post .createproject ,.post .postsharing{
     position: relative;
     display: flex;
     align-items: center;
@@ -21,10 +21,10 @@
     padding: 15px 10px;
     gap: 5px;
 }
-.Midelinformation .createproject img{
+.post .createproject img{
     width: 75px;
 }
-.Midelinformation .createproject .projectInput{
+.post .createproject .projectInput{
     width: 513px;
 height: 52px;
 padding: 10px 24px 10px 24px;
@@ -34,7 +34,7 @@ background: var(--colors-neutral-25, #FAFAFA);
 opacity: 0px;
 
 }
-.Midelinformation .createproject button{
+.post .createproject button{
     border: none;
     border: 1px solid var(--Colors-Neutral-100, rgba(235, 235, 235, 1));
     width: 100%;
@@ -49,19 +49,19 @@ opacity: 0px;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-.Midelinformation .createproject button:hover{
+.post .createproject button:hover{
     color: white ;
     background-color:  var(--text-secondary, rgba(128, 128, 128, 1));
 }
-.Midelinformation .createproject .insertimg{
+.post .createproject .insertimg{
     position: absolute;
     right: 30px;
     top: 36px;
 }
-.Midelinformation .createproject .insertimg img{
+.post .createproject .insertimg img{
     width: 32px;
 }
-.Midelinformation .postsharing{
+.post .postsharing{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,40 +72,40 @@ opacity: 0px;
     border-radius: 15px;
     padding: 15px 10px;
 }
-.Midelinformation .postsharing .sender{
+.post .postsharing .sender{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
-.Midelinformation .postsharing .sender .info{
+.post .postsharing .sender .info{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.Midelinformation .postsharing .sender .info .imgsender{
+.post .postsharing .sender .info .imgsender{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background: var(--colors-Disable-Primary, rgba(235, 235, 235, 1));
 }
-.Midelinformation .postsharing .sender .info .textuser{
+.post .postsharing .sender .info .textuser{
     margin-left: 10px;
 }
-.Midelinformation .postsharing .sender .info .textuser h1{
+.post .postsharing .sender .info .textuser h1{
     font-size: 18px;
     font-weight: 600;
     line-height: 22.5px;
     text-align: left;
     text-decoration-skip-ink: none;
 }
-.Midelinformation .postsharing .sender .otheroptionPost{
+.post .postsharing .sender .otheroptionPost{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
 }
-.Midelinformation .postsharing .sender .info .textuser p{
+.post .postsharing .sender .info .textuser p{
     color: var(--colors-Text-Secondary, rgba(128, 128, 128, 1));
     font-family: Source Sans Pro;
     font-size: 10px;
@@ -115,7 +115,7 @@ opacity: 0px;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-.Midelinformation .postsharing .sender  button.Available{
+.post .postsharing .sender  button.Available{
     background: var(--Colors-Success-100, rgba(221, 248, 231, 1));
     width: 92px;
     height: 35px;
@@ -129,18 +129,18 @@ opacity: 0px;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
-.Midelinformation .postsharing .sender  button.Dotes{
+.post .postsharing .sender  button.Dotes{
     background-color: transparent;
     border: none;
     align-items: center;
 }
-.Midelinformation .postsharing .postDetails{
+.post .postsharing .postDetails{
     margin-top: 10px;
     width: 100%;
     overflow-wrap: break-word;
     word-break: break-word;
 }
-.Midelinformation .postsharing .postDetails h1{
+.post .postsharing .postDetails h1{
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
@@ -149,7 +149,7 @@ opacity: 0px;
     text-decoration-skip-ink: none;
     margin-bottom: 10px;
 }
-.Midelinformation .postsharing .postDetails p{
+.post .postsharing .postDetails p{
     color: var(--Color-Text-Secondary, rgba(153, 153, 153, 1));
     font-family: Source Sans Pro;
     font-size: 14px;
@@ -160,25 +160,25 @@ opacity: 0px;
     text-decoration-skip-ink: none;
     margin-bottom: 10px;
 }
-.Midelinformation .postsharing .postDetails img{
+.post .postsharing .postDetails img{
     width: 100%;
     margin-bottom: 10px;
 }
-.Midelinformation .postsharing .postDetails .action {
+.post .postsharing .postDetails .action {
     display: flex;
     align-items: center;
     width: 100%;
     gap: 35px;
 }
-.Midelinformation .postsharing .postDetails .action .actionoption{
+.post .postsharing .postDetails .action .actionoption{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.Midelinformation .postsharing .postDetails .action  img{
+.post .postsharing .postDetails .action  img{
     width: 24px;
 }
-.Midelinformation .postsharing .postDetails .action  p{
+.post .postsharing .postDetails .action  p{
     margin-left: 4px;
 font-size: 14px;
 font-weight: 400;
@@ -207,9 +207,3 @@ align-items: center;
     fill: red; /* Color when clicked */
 }
 
-
-/* @media screen And (max-width: 1488px){
-    .Midelinformation{
-        width: calc(100% - 820px);
-    }
-} */

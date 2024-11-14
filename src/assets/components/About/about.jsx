@@ -16,9 +16,9 @@ const About = () => {
     const toggleAboutEdit = () => setIsEditingAbout(!isEditingAbout);
 
     return (
-        <div className="AboutScreen">
-            <div className="userInfo">
-                <div className="photo">
+        <div className="about-container">
+            <div className="profile-info">
+                <div className="profile-photo">
                     <img src="./user.png" alt="Profile" />
                 </div>
                 {isEditingProfile ? (
@@ -31,7 +31,7 @@ const About = () => {
                     <h1>{profileInfo.name}</h1>
                 )}
 
-                <div className="rate">
+                <div className="profile-rating">
                     {!isEditingProfile && <img src="./Star 1.png" alt="Star" />}
                     {isEditingProfile ? (
                         <input
@@ -49,14 +49,14 @@ const About = () => {
                 </button>
             </div>
 
-            <div className="aboutuser">
-                <div className="titleabout">
+            <div className="about-section">
+                <div className="about-header">
                     <h1>About</h1>
                     <button onClick={toggleAboutEdit}>
                         {isEditingAbout ? "Save" : <img src="./edit.png" alt="Edit" />}
                     </button>
                 </div>
-                <div className="description">
+                <div className="about-description">
                     {isEditingAbout ? (
                         <textarea
                             rows={5}
@@ -70,10 +70,10 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="projectHistory">
-                <div className="titleabout">
+            <div className="projects-history">
+                <div className="projects-header">
                     <h1>Projects History</h1>
-                    <div className="imges">
+                    <div className="project-actions">
                         <img src="./add.png" alt="Add Project" />
                         <img src="./edit.png" alt="Edit Projects" />
                     </div>
@@ -81,11 +81,8 @@ const About = () => {
 
                 {/* Example of one project entry */}
                 {[1, 2].map((_, index) => (
-                    <div key={index} className="project">
-                        {/* <div className="slide">
-                            <img src={Sideline} alt="Sideline" />
-                        </div> */}
-                        <div className="text">
+                    <div key={index} className="project-entry">
+                        <div className="project-info">
                             <h1>Project Name</h1>
                             <h4>22 Jan 2024 - 11 May 2024</h4>
                             <p>Developed a task management web application designed to help users organize, prioritize, and track their daily tasks efficiently.</p>

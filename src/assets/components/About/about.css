@@ -98,6 +98,9 @@
     justify-content: space-between;
     gap: 15px;
     margin-top: 10px;
+    padding-left: 7px;
+    border-left: 2px solid var(--Color-Primary-Primary, #3C97AF)
+
 }
 .about-container .projects-history .project-entry .project-info h1{
     font-size: 16px;
